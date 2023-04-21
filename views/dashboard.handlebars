@@ -1,0 +1,25 @@
+{{> main}}
+
+{{#if loggedIn}}
+  <h2>Welcome, {{username}}!</h2>
+  {{#if posts.length}}
+    <h3>Your Posts:</h3>
+    {{#each posts}}
+      <div class="card my-4">
+        <div class="card-body">
+          <h4 class="card-title">{{title}}</h4>
+          <p class="card-text">{{content}}</p>
+          <a href="/post/{{id}}" class="btn btn-primary">Edit</a>
+          <form action="/api/post/{{id}}" method="POST" class="d-inline-block">
+            <button class="btn btn-danger" type="submit">Delete</button>
+          </form>
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+    <h3>You haven't made any posts yet!</h3>
+  {{/if}}
+{{else}}
+  <h3>You need to be logged in to view this page.</h3>
+  <a href="/login">Log in here</a>
+{{/if}}
