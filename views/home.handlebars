@@ -1,0 +1,45 @@
+<!-- views/home.handlebars -->
+
+{{> navbar}}
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Welcome to the Nicholas Cage Blog</h1>
+      <p>This is the place to read about all things Nicholas Cage. From his early days as a quirky indie darling to his current status as a Hollywood icon, we've got it all covered.</p>
+      <p>Check out our latest posts below:</p>
+      {{#each posts}}
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title">{{title}}</h2>
+          <p class="card-text">{{excerpt}}</p>
+          <a href="/post/{{id}}" class="btn btn-primary">Read More &rarr;</a>
+        </div>
+        <div class="card-footer text-muted">
+          Posted on {{formatDate createdAt}} by {{author}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title">About Nicholas Cage</h2>
+          <p class="card-text">Nicholas Cage is an American actor, producer, and director. He has starred in over 100 films throughout his career, including <i>Leaving Las Vegas</i>, <i>Con Air</i>, and <i>National Treasure</i>. Cage is known for his intense performances, quirky personality, and unique acting style.</p>
+        </div>
+      </div>
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title">Categories</h2>
+          <ul class="list-unstyled">
+            {{#each categories}}
+            <li><a href="/category/{{this}}">{{this}}</a></li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{> footer}}

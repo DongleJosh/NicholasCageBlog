@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nicholas Cage Blog - Dashboard</title>
+  </head>
+  <body>
+    <h1>Welcome to your dashboard, {{username}}!</h1>
+    <a href="/newpost">Create a new post</a>
+    <hr>
+    {{#if posts.length}}
+      {{#each posts}}
+        <div>
+          <h2>{{title}}</h2>
+          <p>{{body}}</p>
+          <p>Posted by {{author}} on {{createdAt}}</p>
+          <a href="/editpost/{{id}}">Edit</a>
+          <a href="/deletepost/{{id}}">Delete</a>
+        </div>
+        <hr>
+      {{/each}}
+    {{else}}
+      <p>No posts found.</p>
+    {{/if}}
+  </body>
+</html>
