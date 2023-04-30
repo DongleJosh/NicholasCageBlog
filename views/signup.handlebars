@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Nicholas Cage Blog - Sign Up</title>
-  </head>
-  <body>
+
     <h1>Sign Up</h1>
     {{#if errorMessage}}
       <p>{{errorMessage}}</p>
     {{/if}}
-    <form method="POST" action="/signup">
+    <form class="signup-form">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
       <br>
@@ -17,5 +12,6 @@
       <br>
       <button type="submit">Sign Up</button>
     </form>
-  </body>
-</html>
+
+
+<script src="/js/signup.js"></script>
