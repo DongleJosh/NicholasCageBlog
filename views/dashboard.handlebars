@@ -2,8 +2,15 @@
 
 {{#if loggedIn}}
   <h2>Welcome, {{username}}!</h2>
+   <form id="addPost">
+      <input id = "title">
+      <textarea id = "content" cols="30" rows="10"></textarea>
+      <button id "submit">Create New Post</button>
+    </form>
   {{#if posts.length}}
     <h3>Your Posts:</h3>
+   
+
     {{#each posts}}
       <div class="card my-4">
         <div class="card-body">
@@ -19,6 +26,7 @@
   {{else}}
     <h3>You haven't made any posts yet!</h3>
   {{/if}}
+  <script src="js/profile.js"></script>
 {{else}}
   <h3>You need to be logged in to view this page.</h3>
   <a href="/login">Log in here</a>
