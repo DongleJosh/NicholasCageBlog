@@ -2,12 +2,12 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![image](https://user-images.githubusercontent.com/119004668/233763727-d1300b8c-d273-40db-bf71-43069c62cba0.png)
+![image](https://github.com/DongleJosh/NicholasCageBlog/assets/119004668/e78ebd45-5382-46d8-9368-75f39bded305)
 
 
 ## Description
 
-Challenge Week 19 PWA making a test editor
+Challenge Week 14 making a functioning blog
 
 ## Table of Contents
 
@@ -20,11 +20,11 @@ Challenge Week 19 PWA making a test editor
 
 ## Installation
 
-Click the install button or use it in your browser
+n/a
 
 ## Usage
 
-Text editor deployed on Vercel very cool. Idk write notes?
+Make cool blog posts about nicholas cage
 
 ## Contributing
 
